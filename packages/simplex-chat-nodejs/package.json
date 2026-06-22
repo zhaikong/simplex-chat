@@ -1,6 +1,6 @@
 {
   "name": "simplex-chat",
-  "version": "6.5.5",
+  "version": "6.5.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -17,9 +17,9 @@
     "install": "node-gyp configure; node-gyp rebuild --release",
     "install-tools": "npm install -g node-gyp",
     "configure": "node-gyp configure; mkdir libs 2> /dev/null | true",
-    "build": "node-gyp rebuild && tsc && cp ./src/simplex.* ./dist",
-    "run": "node src/index.js",
-    "build-run": "node-gyp build && node src/index.js",
+    "build": "node init && node-gyp rebuild && tsc && cp ./src/simplex.* ./dist",
+    "run": "node init && node src/index.js",
+    "build-run": "node init && node-gyp build && node src/index.js",
     "test": "jest",
     "docs": "typedoc"
   },

@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:js && npm run build:eleventy && npm run build:tailwind",
-    "start": "npx eleventy --serve",
+    "build": "node init && npm run build:js && npm run build:eleventy && npm run build:tailwind",
+    "start": "node init && npx eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:js": "cp ./node_modules/qrcode/build/qrcode.js ./src/js/ && ./copy_call.sh",
-    "build:eleventy": "eleventy",
-    "build:tailwind": "npx tailwindcss -i tailwind.css -o _site/css/tailwind.css",
+    "build:js": "node init && cp ./node_modules/qrcode/build/qrcode.js ./src/js/ && ./copy_call.sh",
+    "build:eleventy": "node init && eleventy",
+    "build:tailwind": "node init && npx tailwindcss -i tailwind.css -o _site/css/tailwind.css",
     "watch:tailwind": "npx tailwindcss -i tailwind.css -o _site/css/tailwind.css --watch"
   },
   "keywords": [],

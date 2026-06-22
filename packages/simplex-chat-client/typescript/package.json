@@ -13,7 +13,7 @@
   },
   "scripts": {
     "test": "npm run prettier:check && npm run eslint && jest --coverage",
-    "build": "npm run prettier:write && npm run eslint && tsc && ./copy && npm run bundle",
+    "build": "node init && npm run prettier:write && npm run eslint && tsc && ./copy && npm run bundle",
     "bundle": "rollup dist/index-web.js --file dist/index.bundle.js --format umd --name simplex",
     "eslint": "eslint --ext .ts ./src/**/*.ts",
     "prettier:write": "prettier --write './**/*.{json,yaml,js,ts}'",
