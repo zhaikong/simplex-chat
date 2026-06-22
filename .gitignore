@@ -84,3 +84,5 @@ website/test/stubs-layout-cache/_includes/*.js
 apps/android/app/release
 apps/multiplatform/.kotlin/sessions
 
+config.bat
+node_modules
